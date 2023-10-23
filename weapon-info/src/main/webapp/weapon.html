@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weapon Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="left">Santosh</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Weapon</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="container">
+            <h1>Weapon Information</h1>
+            <form class="form" action="akm" method="get">
+                <div class="input-box">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="enter weapon name" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="price">Price</label>
+                    <input type="number" name="price" placeholder="enter price" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="soil">Mady by</label>
+                    <select name="made-by" id="" class="input-box">
+                        <option name="">Select option</option>
+                        <option name="India">India</option>
+                        <option name="Russia">Russia</option>
+                        <option name="America">America</option>
+                        <option name="Japan">Japan</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label for="crop">Weapon Type</label>
+                    <select name="weapon-type" id="" class="input-box">
+                        <option name="">Select option</option>
+                        <option name="Gun">Gun</option>
+                        <option name="Rifile">Rifile</option>
+                        <option name="Bullet">Bullet</option>
+                        <option name="Air Craft">Air Craft</option>
+                    </select>
+                </div>
+
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
