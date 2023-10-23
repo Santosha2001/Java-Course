@@ -6,6 +6,6 @@ public class BrowserMain {
 public static void main(String[] args) {
 		
 		Browser browser = new Browser();
-		browser.browser();
+		browser.browser();// Test
 	}
 }
