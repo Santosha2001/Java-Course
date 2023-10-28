@@ -8,10 +8,11 @@ import java.util.Iterator;
 public class States {
 
 	public static void main(String[] args) {
-		Collection<String> collection = new ArrayList<String>(Arrays.asList("Karnataka", "Kerala", "Tamil nadu",
-				"Andra pradesh", "Maharastra", "Goa", "Telangana", "Dehli", "Mijoram", "Jammu", "Uttarakhand",
-				"Manipur", "West bengal", "Meghalaya", "madya pradesh", "Punjab", "Chattisgarh", "Gujarath", "Tripura",
-				"Jarkhand", "Rajastan", "Bihar", "Odisha"));
+		Collection<String> collection = new ArrayList<String>(
+				Arrays.asList("Karnataka", "Kerala", "Tamil nadu", "Andra pradesh", "Maharastra", "Goa", "Telangana",
+						"Dehli", "Mijoram", "Jammu", "Uttarakhand", "Manipur", "West bengal", "Meghalaya",
+						"madya pradesh", "Punjab", "Chattisgarh", "Gujarath", "Tripura", "Jarkhand", "Rajastan",
+						"Bihar", "Odisha", "Andra pradesh", "Maharastra", "Goa", "Telangana", "Dehli", "Mijoram"));
 
 		Collection<String> collection2 = new ArrayList<String>(Arrays.asList("Karnataka", "Kerala", "Tamil nadu",
 				"Andra pradesh", "Maharastra", "Goa", "Telangana", "Dehli", "Mijoram", "Jammu", "Uttarakhand",
@@ -58,6 +59,8 @@ public class States {
 		System.out.println(collection2.size());
 		collection2.removeAll(collection2);
 		System.out.println(collection2.size());
+		
+		System.out.println(collection.size());
 
 	}
 }

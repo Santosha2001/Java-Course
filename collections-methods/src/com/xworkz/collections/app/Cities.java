@@ -49,6 +49,8 @@ public class Cities {
 		System.out.println();
 		collection2.removeAll(collection2);
 		System.out.println(collection2.size());
+		
+		System.out.println(collection.size());
 
 	}
 }
