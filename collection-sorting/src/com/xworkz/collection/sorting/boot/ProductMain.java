@@ -322,5 +322,65 @@ public class ProductMain {
 		dtos.stream().sorted(proNameDesc.thenComparing(proCompanyDesc))
 				.forEach(a -> list.add(a.getName() + ", " + a.getDiscription()));
 		list.forEach(a -> System.out.println(a));
+
+		List<Integer> liId = dtos.stream().map(a -> a.getId()).collect(Collectors.toList());
+		liId.forEach(b -> System.err.print(b + ", "));
+		System.out.println();
+
+		List<Integer> liQuan = dtos.stream().map(a -> a.getQuantity()).collect(Collectors.toList());
+		liQuan.forEach(b -> System.err.print(b + ", "));
+		System.out.println();
+
+		List<Integer> liRateFive = dtos.stream().map(a -> a.getPeopleRatedFive()).collect(Collectors.toList());
+		liRateFive.forEach(b -> System.err.print(b + ", "));
+		System.out.println();
+
+		List<Integer> liRateFour = dtos.stream().map(a -> a.getPeopleRatedFour()).collect(Collectors.toList());
+		liRateFour.forEach(b -> System.err.print(b + ", "));
+		System.out.println();
+
+		List<Integer> liRateThree = dtos.stream().map(a -> a.getPeopleRatedThree()).collect(Collectors.toList());
+		liRateThree.forEach(b -> System.err.print(b + ", "));
+		System.out.println();
+
+		List<Integer> liRateTwo = dtos.stream().map(a -> a.getPeopleRatedTwo()).collect(Collectors.toList());
+		liRateTwo.forEach(b -> System.err.print(b + ", "));
+		System.out.println();
+
+		List<Integer> liRateOne = dtos.stream().map(a -> a.getPeopleRatedOne()).collect(Collectors.toList());
+		liRateOne.forEach(b -> System.err.print(b + ", "));
+		System.out.println();
+
+		List<String> liRateName = dtos.stream().map(a -> a.getName() + ", " + a.getCompany() + ", " + a.getIncluded())
+				.collect(Collectors.toList());
+		liRateName.forEach(b -> System.out.println(b + ", "));
+		System.out.println();
+		System.out.println();
+
+		List<String> liRateDisPacker = dtos.stream()
+				.map(a -> a.getDiscription() + ", " + a.getPacker() + ", " + a.getCountryOfOrigin())
+				.collect(Collectors.toList());
+		liRateDisPacker.forEach(b -> System.err.println(b + ", "));
+		System.out.println();
+
+		List<String> liPriDisRatiWei = dtos.stream()
+				.map(a -> a.getPrice() + ", " + a.getDiscount() + ", " + a.getRating() + "," + a.getItemWeight())
+				.collect(Collectors.toList());
+		liPriDisRatiWei.forEach(a -> System.out.println(a));
+		System.out.println();
+
+		List<String> liDates = dtos.stream().map(a -> a.getManfDate() + ", " + a.getExpDate() + ", "
+				+ a.getAvailableDate() + "," + a.getDelivaryExceptedDate() + ", " + a.getReturnByDate())
+				.collect(Collectors.toList());
+		liDates.forEach(a -> System.out.println(a));
+		System.out.println();
+
+		List<String> liBooleans = dtos
+				.stream().map(a -> a.getReturnable() + ", " + a.getDamaged() + ", " + a.getWarrenty() + ","
+						+ a.getPeopeRated() + ", " + a.getMobileNumber() + ", " + a.getSerialNumber())
+				.collect(Collectors.toList());
+		liBooleans.forEach(a -> System.out.println(a));
+		System.out.println();
+
 	}
 }
