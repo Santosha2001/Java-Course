@@ -37,7 +37,7 @@ public class HotelMain {
 
 		// find all owner names
 		dtos.stream().forEach(a -> list2.add(a.getOwnerName()));
-		list2.forEach(a -> System.err.println(a));
+		list2.forEach(a -> System.err.println("owner names " + a));
 		System.out.println();
 
 		// find all gst
