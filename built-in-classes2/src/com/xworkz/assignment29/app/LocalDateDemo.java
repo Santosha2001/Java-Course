@@ -8,7 +8,7 @@ public class LocalDateDemo {
 		LocalDate date = LocalDate.now();
 		System.out.println(date);
 
-		LocalDate date2 = LocalDate.EPOCH;
+		LocalDate date2 = LocalDate.MAX;
 		System.out.println(date2);
 
 		LocalDate date3 = LocalDate.of(2023, 8, 23);

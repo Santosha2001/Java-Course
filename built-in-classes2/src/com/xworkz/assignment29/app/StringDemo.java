@@ -57,9 +57,6 @@ public class StringDemo {
 		String string10 = st.toLowerCase();
 		System.out.println(string10);
 
-		boolean h = st.isBlank();
-		System.out.println(h);
-
 		int j = st.indexOf(1);
 		System.out.println(j);
 
