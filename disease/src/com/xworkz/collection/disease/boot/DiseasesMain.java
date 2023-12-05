@@ -684,9 +684,18 @@ public class DiseasesMain {
 
 		System.out.println(collection.size());
 
-		Iterator<DiseasesDTO> iterator = collection.iterator();
-		while (iterator.hasNext()) {
-			DiseasesDTO diseasesDTO = (DiseasesDTO) iterator.next();
+//		Iterator<DiseasesDTO> iterator = collection.iterator();
+//		while (iterator.hasNext()) {
+//			DiseasesDTO diseasesDTO = (DiseasesDTO) iterator.next();
+//			System.out.println(diseasesDTO);
+//		}
+
+//		for (Iterator iterator = collection.iterator(); iterator.hasNext();) {
+//			DiseasesDTO diseasesDTO = (DiseasesDTO) iterator.next();
+//			System.out.println(diseasesDTO);
+//		}
+
+		for (DiseasesDTO diseasesDTO : collection) {
 			System.out.println(diseasesDTO);
 		}
 
@@ -704,15 +713,59 @@ public class DiseasesMain {
 				new DiseasesDTO(324.2, 11.0, 832.3, 39.5, 132.5, 34.3, 132.2, 330, 3, 3.2, LocalDate.of(1956, 6, 8)));
 
 		boolean b = collection.containsAll(collection2);
-		System.err.println("\n" + b);
+		System.err.println("\ncollection2 " + b);
 
 		// adding collectin2 to collection
 		collection.addAll(collection2);
 
-		System.out.println("\n" + collection.size());
+		System.out.println("\ncollection " + collection.size());
 
 		boolean c = collection.containsAll(collection2);
-		System.out.println("\n" + c);
+		System.out.println("\nc " + c);
 
+//		System.out.println();
+//		for (Iterator iterator2 = collection2.iterator(); iterator2.hasNext();) {
+//			DiseasesDTO diseasesDTO = (DiseasesDTO) iterator2.next();
+//			System.out.println(diseasesDTO);
+//		}
+
+		DiseasesDTO diseasesDTO = new DiseasesDTO(324.2, 11.0, 832.3, 39.5, 132.5, 34.3, 132.2, 330, 3, 3.2,
+				LocalDate.of(1956, 6, 8));
+		DiseasesDTO diseasesDTO2 = new DiseasesDTO(321.2, 12.0, 832.3, 34.5, 132.5, 34.3, 132.2, 330, 3, 3.2,
+				LocalDate.of(1956, 6, 8));
+
+		Collection<DiseasesDTO> collection3 = new ArrayList<DiseasesDTO>();
+		collection3.addAll(Arrays.asList(diseasesDTO, diseasesDTO2));
+
+		boolean d = collection.contains(collection3);
+		System.out.println("collection3 " + d);
+
+		DiseasesDTO disease400 = new DiseasesDTO(330.3, 86.0, 480.0, 27.5, 120.7, 45.5, 135.8, 330, 7, 2.5,
+				LocalDate.of(2023, 1, 1));
+		DiseasesDTO disease401 = new DiseasesDTO(340.2, 65.0, 370.0, 68.0, 130.7, 30.3, 130.3, 360, 7, 3.4,
+				LocalDate.of(1896, 5, 15));
+		DiseasesDTO disease403 = new DiseasesDTO(320.4, 67.0, 360.0, 46.0, 110.7, 30.5, 130.3, 300, 8, 2.40,
+				LocalDate.of(1955, 8, 22));
+
+		Collection<DiseasesDTO> collection4 = new ArrayList<DiseasesDTO>();
+		collection.addAll(Arrays.asList(disease400, disease401, disease403));
+
+		boolean e = collection.containsAll(collection4);
+		System.out.println("collection4 " + e);
+
+		System.err.println(collection.size());
+
+		DiseasesDTO disease500 = new DiseasesDTO(330.3, 86.0, 480.0, 27.5, 120.7, 45.5, 135.8, 330, 7, 2.5,
+				LocalDate.of(2023, 1, 1));
+		DiseasesDTO disease501 = new DiseasesDTO(340.2, 65.0, 370.0, 68.0, 130.7, 30.3, 130.3, 360, 7, 3.4,
+				LocalDate.of(1896, 5, 15));
+		DiseasesDTO disease503 = new DiseasesDTO(320.4, 67.0, 360.0, 46.0, 110.7, 30.5, 130.3, 300, 8, 2.40,
+				LocalDate.of(1955, 8, 22));
+
+		Collection<DiseasesDTO> collection5 = new ArrayList<DiseasesDTO>();
+		collection5.addAll(Arrays.asList(disease500, disease501, disease503));
+
+		boolean f = collection.removeAll(collection5);
+		System.out.println("removing " + f);
 	}
 }
