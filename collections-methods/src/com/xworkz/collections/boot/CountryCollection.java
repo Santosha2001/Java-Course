@@ -10,6 +10,8 @@ import com.xworkz.collections.app.dto.CountryDTO;
 public class CountryCollection {
 
 	public static void main(String[] args) {
+		CountryDTO countryDTO = new CountryDTO();
+
 		CountryDTO country1 = new CountryDTO(1, "United States", "Washington, D.C.", 331000000, "July 4, 1776", 50,
 				"Christianity", "Bald Eagle", "Bald Eagle", "American Football", "Joseph R. Biden Jr.");
 		CountryDTO country2 = new CountryDTO(2, "United Kingdom", "London", 66040000, "July 4, 1776", 4, "Christianity",
@@ -605,5 +607,54 @@ public class CountryCollection {
 			CountryDTO country = itr.next();
 			System.out.println(country);
 		}
+
+		System.out.println(countries.size());
+
+		CountryDTO country196 = new CountryDTO(195, "Kailasa", "Kailasa", 200000, "July 28, 2020", 3, "Hinduism",
+				"Elephant", "Eagle", "Volleyball", "Nityananda");
+
+		boolean b = countries.contains(country196);
+		System.err.println("country before " + b);
+
+		countries.add(country196);
+
+		boolean c = countries.contains(country196);
+		System.out.println("country after " + c);
+
+		CountryDTO country197 = new CountryDTO(195, "Kailasa", "Kailasa", 200000, "July 28, 2020", 3, "Hinduism",
+				"Elephant", "Eagle", "Volleyball", "Nityananda");
+
+		boolean d = countries.contains(country197);
+		System.out.println("Equality " + d);
+
+//		Iterator<CountryDTO> iterator = countries.iterator();
+//		while (iterator.hasNext()) {
+//			CountryDTO countryDTO2 = iterator.next();
+//			if (countryDTO2.getCountryName().contains("ma")) {
+//				System.out.println(countryDTO2.getCountryName());
+//			}
+//		}
+
+//		Iterator<CountryDTO> iterator2 = countries.iterator();
+//		int count = 0;
+//		while (iterator2.hasNext()) {
+//			CountryDTO countryDTO3 = iterator2.next();
+//			if (countryDTO3.getCountryName().contains("ma")) {
+//				System.out.println(countryDTO3.getCountryName());
+//				count++;
+//			}
+//		}
+//		System.out.println("count " + count);
+
+		int count = 0;
+		for (CountryDTO countryDTO2 : countries) {
+			if (countryDTO2.getCountryName().endsWith("a")) {
+				System.out.println(countryDTO2.getCountryName());
+				count++;
+			}
+		}
+
+		System.out.println("count in for-each: " + count);
+
 	}
 }
