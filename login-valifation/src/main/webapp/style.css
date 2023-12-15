@@ -1,0 +1,121 @@
+
+ * {
+	padding: 0;
+	margin: 0;
+}
+
+.navbar {
+	background-color: rgb(128, 255, 128);
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: black;
+	height: 50px;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+nav ul li {
+	list-style: none;
+	margin: 0px 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li a:hover {
+	color: #9df3d6;
+}
+
+#container {
+	display: block;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1%;
+	max-width: 300px;
+	width: 100%;
+	background: #ff8080;
+	padding: 35px;
+	border-radius: 10px;
+	margin-left: 40%;
+	padding-right: 1px;
+}
+
+#container h1 {
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #e92858;
+	text-align: center;
+}
+
+#container .form {
+	margin-top: 5px;
+}
+
+.form .input-box {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.input-box label {
+	color: #333;
+	font-size: 1.2rem;
+}
+
+.form :where(.input-box input) {
+	position: relative;
+	height: 30px;
+	width: 100%;
+	outline: none;
+	font-size: 1rem;
+	color: #707070;
+	margin-top: 8px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+}
+
+select {
+	position: relative;
+	height: 30px;
+	width: 100%;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.form button {
+	height: 35px;
+	width: 100%;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-top: 30px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	background: rgb(130, 106, 251);
+}
+
+.form button:hover {
+	background: rgb(88, 56, 250);
+}
+
+::placeholder {
+	text-align: left;
+	padding-left: 10px;
+}
+
+.text-center {
+	margin-top: 235px;
+	margin-bottom: -200px;
+}
