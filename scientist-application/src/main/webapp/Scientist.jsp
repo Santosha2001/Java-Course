@@ -164,7 +164,11 @@ input[type="submit"]:hover {
 			
 			let button=document.getElementById("submit").value;
 
-			if (name!=null && name!="" && name.length < 3 || name.length > 20) {
+			if (name!=null && name!="") {
+				document.getElementById("nameError").innerHTML = "name can't be empty..";
+				return false;
+			}
+			else if (name.length < 3 || name.length > 20) {
 				document.getElementById("nameError").innerHTML = "Please enter the name here..";
 				return false;
 			}
