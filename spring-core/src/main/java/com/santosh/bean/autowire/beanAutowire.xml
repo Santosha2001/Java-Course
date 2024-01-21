@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+	<bean name="address" class="com.santosh.bean.autowire.Address">
+		<property name="street" value="First street" />
+		<property name="city" value="Hadagali" />
+	</bean>
+
+	<bean name="address2" class="com.santosh.bean.autowire.Address">
+		<property name="street" value="Third street" />
+		<property name="city" value="Hospete" />
+	</bean>
+
+	<!-- byName will check that bean name and property name is same or not. 
+		Used when multiple bean are present -->
+	<!-- byType: will check type i.e class name, if more then one bean exist 
+		then gives exception -->
+
+	<bean id="employee" class="com.santosh.bean.autowire.Employee"
+		name="employee">
+		<property name="id" value="1" />
+		<property name="employeeName" value="Santosh" />
+	</bean>
+
+
+</beans>

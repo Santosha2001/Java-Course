@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- for creating object -->
+	<bean id="student" class="com.santosh.beans.StudentBean">
+		<!-- property tag is used for the setter injection to set the value -->
+		<property name="id">
+			<value>21</value>
+		</property>
+
+		<!-- value tag is optional it can also be used as the value attribute in 
+			property -->
+		<property name="studentName">
+			<value>Santosh</value>
+		</property>
+
+		<property name="address">
+			<value>Hadagali</value>
+		</property>
+	</bean>
+
+	<bean id="student2" class="com.santosh.beans.StudentBean">
+		<property name="id" value="22"></property>
+		<property name="studentName" value="Sateesh"></property>
+		<property name="address" value="Hadagali"></property>
+	</bean>
+</beans>

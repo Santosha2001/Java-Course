@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="studentCollection"
+		class="com.santosh.beans.CollectionOfStudentBean">
+		<property name="studentName" value="Santosh C" />
+		<property name="age" value="22" />
+		<property name="studentAddress">
+			<list>
+				<value>Hadagali</value>
+				<value>Hospete</value>
+				<value>Bengaluru</value>
+			</list>
+		</property>
+
+		<property name="subjectWithMarks">
+			<map>
+				<entry key="java" value="76" />
+				<entry key="python" value="60" />
+				<entry key="sql" value="55" />
+			</map>
+		</property>
+
+		<property name="mobileNumbers">
+			<set>
+				<value>7022590204</value>
+				<value>9019770673</value>
+				<value>8152010705</value>
+				<null />
+				<null></null>
+			</set>
+		</property>
+	</bean>
+</beans>
