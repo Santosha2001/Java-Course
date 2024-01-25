@@ -5,19 +5,19 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.santosh.spring.jdbc.dao.StudentDAO;
+import com.santosh.spring.jdbc.dto.StudentDTO;
 
-public class RowMapperImpl implements RowMapper<StudentDAO> {
+public class RowMapperImpl implements RowMapper<StudentDTO> {
 
 	@Override
-	public StudentDAO mapRow(ResultSet rs, int rowNum) throws SQLException {
+	public StudentDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
 
-		StudentDAO dao = new StudentDAO();
-		dao.setId(rs.getInt(1));
-		dao.setStudentName(rs.getString(2));
-		dao.setCity(rs.getString(3));
-		dao.setMobileNo(rs.getLong(4));
-		return dao;
+		StudentDTO dto = new StudentDTO();
+		dto.setId(rs.getInt(1));
+		dto.setStudentName(rs.getString(2));
+		dto.setCity(rs.getString(3));
+		dto.setMobileNo(rs.getLong(4));
+		return dto;
 	}
 
 }

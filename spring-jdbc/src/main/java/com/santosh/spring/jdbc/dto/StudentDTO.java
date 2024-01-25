@@ -1,4 +1,4 @@
-package com.santosh.spring.jdbc.dao;
+package com.santosh.spring.jdbc.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class StudentDAO {
+public class StudentDTO {
 
 	private int id;
 	private String studentName;

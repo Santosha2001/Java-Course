@@ -6,8 +6,8 @@ import java.util.Map;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.santosh.spring.jdbc.dao.StudentDAO;
-import com.santosh.spring.jdbc.repository.StudentDaoRepositoryImpl;
+import com.santosh.spring.jdbc.dto.StudentDTO;
+import com.santosh.spring.jdbc.repository.StudentRepositoryImpl;
 
 public class SpringJdbcRunner {
 
@@ -16,7 +16,7 @@ public class SpringJdbcRunner {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/santosh/spring/jdbc/configuration/configuration.xml");
 
-		StudentDaoRepositoryImpl bean = context.getBean("studentDao", StudentDaoRepositoryImpl.class);
+		StudentRepositoryImpl bean = context.getBean("studentDao", StudentRepositoryImpl.class);
 
 		// insert
 		/*
@@ -36,7 +36,7 @@ public class SpringJdbcRunner {
 		 */
 
 		// delete
-		StudentDAO dao = new StudentDAO();
+		StudentDTO dao = new StudentDTO();
 		dao.setStudentName("Basavaraj");
 
 		int deleteQuery = bean.delete(dao);
@@ -44,12 +44,12 @@ public class SpringJdbcRunner {
 		System.out.println((deleteQuery > 0) ? "Deleted." : "Can't delete");
 
 		// select single row
-		StudentDAO dao2 = bean.selectById(1);
+		StudentDTO dao2 = bean.selectById(1);
 		System.out.println(dao2);
 		System.out.println("___________________________________________________________");
 
 		// select all rows
-		List<StudentDAO> selectAll = bean.selectAll();
+		List<StudentDTO> selectAll = bean.selectAll();
 		selectAll.forEach(a -> System.out.println(a));
 		System.out.println("___________________________________________________________");
 
