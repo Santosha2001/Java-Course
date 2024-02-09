@@ -40,5 +40,21 @@ public class StoneRunner {
 
         repository.fineAll().forEach(System.out::println);
         System.out.println("____________________________________________________");
+
+        System.out.println("FIND BY ID USING CRITERIA");
+        repository.findById(3);
+        System.out.println("____________________________________________________");
+
+        System.out.println("FIND BY SIZE");
+        repository.findBySize("Medium");
+        System.out.println("____________________________________________________");
+
+        System.out.println("FIND BY ID AND NAME");
+        repository.findByIdAndName(5);
+        System.out.println("____________________________________________________");
+
+        System.out.println("FIND BY SIZE COLOR AND NAME");
+        repository.findByStoneSizeColorAndName("Large", "Emerald Green", "Onyx");
+        System.out.println("____________________________________________________");
     }
 }

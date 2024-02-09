@@ -21,4 +21,13 @@ public interface StoneRepository {
 
     List<StoneEntity> fineAll();
 
+    //criteria
+    StoneEntity findById(int id);
+
+    List<StoneEntity> findBySize(String size);
+
+    StoneEntity findByIdAndName(int id);
+
+    List<StoneEntity> findByStoneSizeColorAndName(String size, String color, String name);
+
 }
